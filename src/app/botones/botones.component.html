@@ -1,0 +1,26 @@
+
+<!-- botones con disable dinamico al hacer clik -->
+
+<button [class.disabled]="button_disable" class="btn btn-danger" (click)="text_color = 'text-danger'">
+  color rojo
+</button>
+
+<button [class.disabled]="button_disable" class="btn btn-success mx-2" (click)="text_color = 'text-success'">
+  clor verde
+</button>
+
+<button [class.disabled]="button_disable" class="btn btn-primary" (click)="text_color = 'text-primary'">
+  color azul
+</button>
+
+<p [class]="text_color">texto que va a cambiar</p>
+
+<button class="btn btn-secondary" (click)="button_disable = !button_disable">
+  activa/desactiva
+</button>
+
+
+
+
+
+
