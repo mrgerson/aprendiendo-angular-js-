@@ -8,16 +8,26 @@
     <div class="card-body">
       <div class="mb-2">
         <label class="form-label">Nombre</label>
-        <input type="text" name="nombre" id="" class="form-control" placeholder="Por favor ingresa un nombre" [(ngModel)]="persona.nombre">
+        <input type="text" name="nombre" id="" class="form-control" placeholder="Por favor ingresa un nombre" [(ngModel)]="persona.nombre" required #name="ngModel">
+
+        <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine">
+          el nombre es obligatorio
+        </div>
       </div>
       <div>
         <label class="form-label">Edad</label>
-        <input type="number" name="edad" id="" class="form-control" placeholder="Por favor ingresa una edad" [(ngModel)]="persona.edad">
+        <input type="number" name="edad" id="" class="form-control" placeholder="Por favor ingresa una edad" [(ngModel)]="persona.edad" required #edad="ngModel">
+
+        <div class="alert alert-danger mt-2" [hidden]="edad.valid || edad.pristine">
+          La edad es obligatoria
+        </div>
       </div>
       <button class="btn btn-primary mt-2">Enviar</button>
     </div>
   </form>
 </div>
+
+{{name.errors | json}}
 
 <!-- muestra en formato  json el objeto persona -->
 {{persona | json }}
