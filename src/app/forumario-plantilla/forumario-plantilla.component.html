@@ -1,10 +1,13 @@
 <!--
   [(ngModel)]="persona.nombre"
   manera de comunicar lo que se ingresa del formulario con la logica de javascrip. con el model
+
+  formContact
+  con estta etiqueta puedo acceder a el estado del formulario si se han cumplido todas las validaciones o no
  -->
 
 <div class="card">
-  <form (ngSubmit)="procesar()">
+  <form (ngSubmit)="procesar()" #formContact="ngForm">
     <div class="card-body">
       <div class="mb-2">
         <label class="form-label">Nombre</label>
@@ -22,7 +25,7 @@
           La edad es obligatoria
         </div>
       </div>
-      <button class="btn btn-primary mt-2">Enviar</button>
+      <button class="btn btn-primary mt-2" [disabled]="formContact.invalid">Enviar</button>
     </div>
   </form>
 </div>

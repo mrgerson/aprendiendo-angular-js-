@@ -8,9 +8,12 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { ForumarioPlantillaComponent } from './forumario-plantilla/forumario-plantilla.component';
+import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
 
-//para los formularios de plantillas
-import { FormsModule } from '@angular/forms';
+
+//FormsModule para los formularios de plantillas -- ReactiveFormsModule para formularios reactivos
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 /*
 - en declarations se declaran los componentes que se van agregando
@@ -26,12 +29,14 @@ import { FormsModule } from '@angular/forms';
     FormularioComponent,
     BuclesComponent,
     SwitchComponent,
-    ForumarioPlantillaComponent
+    ForumarioPlantillaComponent,
+    FormularioReactivoComponent
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
