@@ -9,10 +9,11 @@ import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { ForumarioPlantillaComponent } from './forumario-plantilla/forumario-plantilla.component';
 import { FormularioReactivoComponent } from './formulario-reactivo/formulario-reactivo.component';
-
+import { ChildrenComponent } from './children/children.component';
 
 //FormsModule para los formularios de plantillas -- ReactiveFormsModule para formularios reactivos
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 /*
@@ -30,7 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BuclesComponent,
     SwitchComponent,
     ForumarioPlantillaComponent,
-    FormularioReactivoComponent
+    FormularioReactivoComponent,
+    ChildrenComponent
 
   ],
   imports: [

@@ -1,7 +1,10 @@
 
 
 <div class="container">
-  <h1>componente principal</h1>
+
+  <h1>{{title}}</h1>
+
+  <h1>componente padre</h1>
   <!-- componente que muestra botones -->
   <!-- <app-botones></app-botones> -->
 
@@ -22,7 +25,14 @@
    <!-- <app-forumario-plantilla></app-forumario-plantilla> -->
 
    <!-- formularios reactivos -->
-   <app-formulario-reactivo></app-formulario-reactivo>
+   <!-- <app-formulario-reactivo></app-formulario-reactivo> -->
+
+   <input type="text" class="form-control mb-4" [(ngModel)]="title">
+   <!-- forma larga -->
+  <!--  <app-children [title]="title" (titleChange)="title = $event"></app-children> -->
+
+    <!-- forma corta-->
+    <app-children [(title)]="title"></app-children>
 
 </div>
 
